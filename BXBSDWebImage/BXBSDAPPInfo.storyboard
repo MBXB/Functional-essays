@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vNm-FM-pWn">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Controller-->
+        <scene sceneID="4Ha-Qe-smG">
+            <objects>
+                <tableViewController id="X2R-Ra-VfP" customClass="BXBSDController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="WTs-Om-sOy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellid" rowHeight="80" id="CyY-b8-s5g" customClass="BXBAPPCellTableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CyY-b8-s5g" id="L5e-F2-Iom">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gs1-v1-LZ1">
+                                            <rect key="frame" x="16" y="17" width="45" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="BjD-lu-K5Z"/>
+                                                <constraint firstAttribute="width" constant="45" id="en1-2T-Kub"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEx-eb-Bid">
+                                            <rect key="frame" x="69" y="17" width="33" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fb-av-mBN">
+                                            <rect key="frame" x="69" y="50" width="27" height="12"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3fb-av-mBN" firstAttribute="bottom" secondItem="gs1-v1-LZ1" secondAttribute="bottom" id="1Hv-yN-Cji"/>
+                                        <constraint firstItem="UEx-eb-Bid" firstAttribute="top" secondItem="gs1-v1-LZ1" secondAttribute="top" id="CSh-KM-FOy"/>
+                                        <constraint firstItem="UEx-eb-Bid" firstAttribute="leading" secondItem="gs1-v1-LZ1" secondAttribute="trailing" constant="8" id="KLf-Lk-P83"/>
+                                        <constraint firstItem="3fb-av-mBN" firstAttribute="leading" secondItem="gs1-v1-LZ1" secondAttribute="trailing" constant="8" id="gOf-gQ-aNY"/>
+                                        <constraint firstItem="gs1-v1-LZ1" firstAttribute="leading" secondItem="L5e-F2-Iom" secondAttribute="leadingMargin" constant="8" id="wqu-yT-Rvm"/>
+                                        <constraint firstItem="gs1-v1-LZ1" firstAttribute="centerY" secondItem="L5e-F2-Iom" secondAttribute="centerY" id="zm1-N2-Nye"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="downLoadLB" destination="3fb-av-mBN" id="hhf-XP-SVO"/>
+                                    <outlet property="iconImage" destination="gs1-v1-LZ1" id="BG5-EE-IoK"/>
+                                    <outlet property="nameLB" destination="UEx-eb-Bid" id="g7a-6O-VpZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="X2R-Ra-VfP" id="YrN-bq-hYQ"/>
+                            <outlet property="delegate" destination="X2R-Ra-VfP" id="Dz4-mD-iUC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ZoW-1p-j9w"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="INt-hu-4wY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="251"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qte-l5-2Ne">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vNm-FM-pWn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CRB-k0-Zmf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="X2R-Ra-VfP" kind="relationship" relationship="rootViewController" id="NAc-3U-tgJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="axR-Xh-7pY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240" y="251"/>
+        </scene>
+    </scenes>
+</document>

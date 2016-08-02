@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BXBSDController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+//    BXBSDController *sdVC = [[BXBSDController alloc]init];
+//    self.window.rootViewController = sdVC;
+//    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
